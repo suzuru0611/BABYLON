@@ -23,7 +23,7 @@ const createScene = function() {
     roof01.rotation.z=Math.PI/2
     
     const groundMat = new BABYLON.StandardMaterial('groundMat')
-    groundMat.diffuseColor = new BABYLON.Texture("https://www.babylonjs-playground.com/textures/floor.png");
+    groundMat.diffuseTexture = new BABYLON.Texture("./001.png");
     box01.material = groundMat;
     return scene;
 };

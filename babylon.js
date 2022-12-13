@@ -3,17 +3,17 @@ const engine = new BABYLON.Engine(canvas, true);
 
 const createScene = function() {
     const scene = new BABYLON.Scene(engine);
-    scene.clearColor = new BABYLON.Color3.Black;
+    scene.clearColor = new BABYLON.Color3.Random;
     
     const alpha =  Math.PI/4;
     const beta = Math.PI/3;
-    const radius = 8;
+    const radius = 10;
     const target = new BABYLON.Vector3(0, 0, 0);
     
     const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene);
     camera.attachControl(canvas, true);
     
-    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
+    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(5, 5, 5));
     
     const box = BABYLON.MeshBuilder.CreateBox("box", {});
     box.position.x = 0.5;

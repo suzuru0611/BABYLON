@@ -18,13 +18,20 @@ const createScene = function() {
     const box01 = BABYLON.MeshBuilder.CreateBox("box", {width:2,height:1.5,depth:3});
     box01.position.x = 0;
     box01.position.y = 0;
+    
+    const boxMaterial = new BABYLON.StandardMaterial('boxMaterial')
+    boxMaterial.diffuseTexture = new BABYLON.Texture("./02.png");
+    box01.material = boxMaterial;
+
     const roof01 = BABYLON.MeshBuilder.CreateCylinder('roof',{diameter:1.2,height:1.2,tessellation:3})
     roof01.position.y =1;
     roof01.rotation.z=Math.PI/2
     
-    const groundMat = new BABYLON.StandardMaterial('groundMat')
-    groundMat.diffuseTexture = new BABYLON.Texture("./001.png");
-    box01.material = groundMat;
+    const roofMaterial = new BABYLON.StandardMaterial('roofMaterial')
+    roofMaterial.diffuseTexture = new BABYLON.Texture("./01.png");
+    roof01.material = roofMaterial;
+
+
     return scene;
 };
 const sceneToRender = createScene();

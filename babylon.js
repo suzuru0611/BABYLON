@@ -24,6 +24,8 @@ const createScene = function() {
     faceUV[2] = new BABYLON.Vector4(0.25, 0, 0.5, 1.0); //right side
     faceUV[3] = new BABYLON.Vector4(0.75, 0, 1.0, 1.0); //left side
     // top 4 and bottom 5 not seen so not set
+
+    
     
 
     const box01 = BABYLON.MeshBuilder.CreateBox("box", {faceUV:faceUV,wrap:true});
